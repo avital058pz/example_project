@@ -1,10 +1,10 @@
-const express=require('express')
+ const express=require('express');
 
-const app=express();
-    
- const userRoutes = require('./UserRouter');
-  
-app.use(userRoutes)
+ const app=express();
+     
+ const userRoutes = require('./userRouter');
+   
+app.use(userRoutes);
 
 const port = process.env.PORT || 3000;
 
