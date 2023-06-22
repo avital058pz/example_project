@@ -6,6 +6,7 @@ const express=require('express');
    
 app.use(userRoutes);
 
- const port = process.env.PORT || 3000;
+ const port = process.env.PORT || 3002;
 
  app.listen(3000, () => console.log('app is listening at port 3000'));
+
