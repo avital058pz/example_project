@@ -85,7 +85,3 @@ module.exports = {
     deleteUser,
     getUserbyId
 };
-
-
-
-
