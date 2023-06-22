@@ -4,8 +4,8 @@ const data = require("./UserModol")
 
 const Controler={
 
-    getAllUser:(req,res)=>{
-        res.status(200).json(data.getallusers());
+    getAllUser:async (req,res)=>{
+      await res.status(200).json(data.getallusers());
     },
 
 
@@ -60,9 +60,10 @@ const Controler={
         
      },
     getUserbyId:(req,res)=>{
-           const  id =req.params.userId;
+      debugger
+           const   {userId} =req.params;
            try {
-            const user=data.getUserbyId(id);
+            const user=data.getUserbyId(userId);
             if(!user){
                 res.status(404).json({error:"user not found"})
                }

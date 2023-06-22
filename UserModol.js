@@ -74,6 +74,7 @@ function getUserbyId(userID) {
     const user = UsersArr.find((x) => x.userID == userID)
     if(!user)
        throw new Error("user not found")
+    else
     return user
 }
 module.exports = {
