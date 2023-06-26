@@ -62,18 +62,21 @@ const Controler = {
   },
   getUserbyId: async (req, res) => {
     const id = req.params.userId;
-    try {
+    console.log(id)
+      try {
       const user = await userData.getUserbyId(id);
-      if (!user) {
-        console.log("user not found")
-       return res.status(404).json({ error: "user not found" })
-      }
-    return  res.status(200).json(user);
+      console.log(user)
+     
+        return  res.status(200).json(user);
     } catch (error) {
-     return res.status(500).json({ error: "server error" })
+      return res.status(404).json({ error: "user not found" })
     }
+     
+    },
 
-  },
+
+ 
 };
+ 
 
 module.exports = Controler;
